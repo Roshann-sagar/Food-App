@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Main Section Start -->
+<div class="main-section">
+    <div class="page-section nopadding cs-nomargin" style="margin-top: 0px;padding-top: 60px;padding-bottom: 60px;margin-bottom: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="user-dashboard loader-holder">
+                        <div class="user-holder">
+                            <h4 class="text-center" style="margin-bottom: 0;">MY ACCOUNT</h4>
+                            <p class="text-center">Manage your account details and settings.</p>
+                            <hr>
+                            <div id="account-details-holder">
+                                <ul class="account-details-tab-container">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <div class="field-holder">
+                                                                    <label>First Name</label>
+                                                                    <p>{{ user.first_name }}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <div class="field-holder">
+                                                                    <label>Last Name</label>
+                                                                    <p>{{ user.last_name }}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <div class="field-holder">
+                                                                    <label>Email Address</label>
+                                                                    <p>{{ user.email }}</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                                <div class="field-holder">
+                                                                    <label>Username</label>
+                                                                    <p>{{ user.username }}</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="field-holder">
+                                                    <div class="actions-holder">
+                                                        {% comment %} <a href="{% url 'edit_profile' %}" class="btn bgcolor">Edit Profile</a>
+                                                        <a href="{% url 'change_password' %}" class="btn bgcolor">Change Password</a> {% endcomment %}
+                                                        <a href="{% url 'logout' %}" class="btn bgcolor">Logout</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    {% include 'includes/alerts.html' %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Section End -->
+
+{% endblock %}

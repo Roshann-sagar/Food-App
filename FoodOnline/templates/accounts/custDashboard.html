@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to your Dashboard</h1>
+    <p>You have {{ orders_count }} orders.</p>
+    
+    <h2>Recent Orders</h2>
+    <ul>
+        {% for order in recent_orders %}
+            <li>Order ID: {{ order.id }}, Ordered on: {{ order.created_at }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
